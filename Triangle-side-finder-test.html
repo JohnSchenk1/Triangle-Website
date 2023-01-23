@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+
+    <title>
+        Right triangle finder
+    
+    </title>
+</head>
+
+<body>
+
+<h1> 
+    Right Triangle Finder
+</h1>
+
+<input
+type="Text" 
+id = "a" 
+placeholder = "Adjacent">
+
+
+<input
+type="Text" 
+id = "b" 
+placeholder = "Opposite">
+
+
+
+
+<p>
+    <img src="Rtriangle.svg.png" alt="" 
+        width = "600" height = "510">
+</p>
+
+
+
+
+
+
+<div id= "output" ></div>
+
+<div id="angle" ></div>
+</body>
+
+<script>
+
+inputDivA = document.getElementById("a");
+inputDivA.addEventListener("change", function(){
+    a = document.getElementById("a").value;
+    b = document.getElementById("b").value;
+    c = (a**2 + b**2)**0.5;
+    document.getElementById("output").innerHTML = ("The hypotenuse is: " + c);
+})
+
+inputDivB = document.getElementById("b");
+inputDivB.addEventListener("change", function(){
+    b = document.getElementById("b").value;
+    a = document.getElementById("a").value;
+    c = (a**2 + b**2)**0.5;
+    document.getElementById("output").innerHTML = ("The hypotenuse is: " + c);
+    A = Math.asin(b/c)*180 / (Math.PI)
+    B = Math.acos(b/c) * 180 /(Math.PI)
+    document.getElementById("angle").innerHTML = ("Angle A is: " + A + "°" + " Angle B is: " + B +  "°")
+    
+
+
+})
+
+
+
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
